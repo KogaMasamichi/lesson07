@@ -12,6 +12,6 @@ addButton.addEventListener("click", event => {
 removeButton.addEventListener("click", event => {
     const indexList = list.childElementCount
     if (indexList >= 1) {
-        list.removeChild(list.lastElementChild)
+        list.removeChild(list.lastChild)
     }
 })
