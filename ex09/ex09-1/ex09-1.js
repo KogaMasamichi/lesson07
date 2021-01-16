@@ -4,17 +4,14 @@ const removeButton = document.getElementById("remove")
 
 addButton.addEventListener("click", event => {
     const newList = document.createElement("li")
+    const item = list.childElementCount + 1
+    newList.textContent = `アイテム${item}`
     list.appendChild(newList)
-
-    for (let i = 0; i < list.childElementCount + 1; i++) {
-        newList.textContent = `アイテム${i}`
-    }
 })
 
 removeButton.addEventListener("click", event => {
     const indexList = list.childElementCount
-
     if (indexList >= 1) {
-        list.removeChild(list.lastChild)
+        list.removeChild(list.lastElementChild)
     }
 })
